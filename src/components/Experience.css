@@ -1,0 +1,158 @@
+/* ---- Work history ---- */
+.exp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  padding: 32px 0;
+  border-top: 1px solid #ccc;
+}
+
+.exp-item:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.exp-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.exp-period {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.exp-company {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.exp-role {
+  font-family: var(--font-display);
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 400;
+  margin-bottom: 12px;
+  letter-spacing: -0.2px;
+}
+
+.exp-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.exp-bullets li {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  padding-left: 16px;
+  position: relative;
+}
+
+.exp-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #999;
+}
+
+/* ---- Skills grid ---- */
+.skills-section {
+  margin-top: 60px;
+}
+
+.detail-title {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2px;
+}
+
+.skill-block {
+  background: var(--card-bg);
+  padding: 24px 20px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.skill-block:hover {
+  border-color: var(--fg);
+}
+
+.skill-category {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-tag {
+  font-size: 11px;
+  padding: 3px 8px;
+  background: var(--bg);
+  border: 1px solid #bbb;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Education ---- */
+.education-section {
+  margin-top: 60px;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 4px;
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.edu-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.edu-meta,
+.edu-note {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .exp-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

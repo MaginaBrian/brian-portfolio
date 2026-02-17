@@ -1,0 +1,121 @@
+.home-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: clamp(40px, 8vw, 100px);
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 7vw, 88px);
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: clamp(30px, 6vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+/* Row: CTA left, photo right */
+.hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(30px, 5vw, 60px);
+  margin-bottom: clamp(30px, 6vw, 60px);
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-right {
+  max-width: clamp(220px, 28vw, 360px);
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.hero-photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+}
+
+/* CTA */
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 3vw, 30px);
+}
+
+.hero-arrow {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 400;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.hero-tagline {
+  font-size: clamp(11px, 1.5vw, 14px);
+  max-width: 340px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+/* Watermark */
+.hero-watermark-section {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  overflow: hidden;
+}
+
+.hero-watermark {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 9vw, 130px);
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 0.85;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--fg);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .hero-watermark-section {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    text-align: left;
+    margin-top: 40px;
+  }
+
+  .hero-watermark {
+    white-space: normal;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-row {
+    flex-direction: column;
+  }
+
+  .hero-right {
+    max-width: 100%;
+  }
+}

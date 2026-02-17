@@ -1,0 +1,85 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(10px, 2vw, 30px);
+  margin-bottom: clamp(40px, 8vw, 80px);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.nav-name {
+  font-size: clamp(13px, 1.8vw, 17px);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+.nav-position {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: var(--muted);
+  font-weight: 400;
+  text-align: center;
+  flex: 1;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  letter-spacing: 0.3px;
+}
+
+.nav-location {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: var(--muted);
+  font-weight: 400;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+}
+
+.nav-links button {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: var(--fg);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: var(--font-mono);
+  transition: opacity 0.2s;
+  padding: 0;
+  letter-spacing: 0.3px;
+}
+
+.nav-links button:hover {
+  opacity: 0.5;
+}
+
+.nav-links button.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.nav-separator {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: var(--muted);
+  margin: 0 clamp(3px, 0.5vw, 8px);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .nav-position {
+    text-align: left;
+    flex: none;
+  }
+}
