@@ -87,14 +87,21 @@ const styles = `
     line-height: 1.05;
     letter-spacing: -1px;
   }
-  .hero-section { display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; margin-bottom: clamp(30px, 6vw, 60px); flex-wrap: wrap; }
-  .hero-left { flex: 1; min-width: 200px; }
-  .hero-right { max-width: clamp(220px, 28vw, 360px); width: 100%; }
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(30px, 5vw, 60px);
+    margin-bottom: clamp(30px, 6vw, 60px);
+    flex-wrap: wrap;
+  }
+  .hero-left { flex: 1; min-width: 220px; display: flex; align-items: center; }
+  .hero-right { max-width: clamp(220px, 28vw, 360px); width: 100%; flex-shrink: 0; }
   .profile-photo { width: 100%; height: auto; object-fit: cover; display: block; filter: grayscale(20%); }
 
-  .cta-section { display: flex; align-items: flex-start; gap: clamp(15px, 3vw, 30px); margin-bottom: clamp(30px, 6vw, 60px); }
-  .arrow { font-family: 'DM Serif Display', serif; font-size: clamp(48px, 6vw, 72px); font-weight: 400; line-height: 1; }
-  .support-text { font-size: clamp(11px, 1.5vw, 14px); max-width: 420px; text-transform: uppercase; letter-spacing: 2px; line-height: 1.7; font-weight: 400; color: var(--muted); padding-top: 12px; }
+  .cta-section { display: flex; align-items: center; gap: clamp(15px, 3vw, 30px); }
+  .arrow { font-family: 'DM Serif Display', serif; font-size: clamp(48px, 6vw, 72px); font-weight: 400; line-height: 1; flex-shrink: 0; }
+  .support-text { font-size: clamp(11px, 1.5vw, 14px); max-width: 340px; text-transform: uppercase; letter-spacing: 2px; line-height: 1.7; font-weight: 400; color: var(--muted); }
 
   .large-name-section { position: absolute; bottom: 0; right: 0; text-align: right; overflow: hidden; }
   .large-name {
@@ -387,6 +394,7 @@ export default function App() {
               </div>
             </div>
           </FadeSection>
+
 
           <div className="large-name-section">
             <h2 className="large-name">MAGINA</h2>
