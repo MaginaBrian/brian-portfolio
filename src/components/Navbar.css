@@ -64,6 +64,20 @@
   text-underline-offset: 4px;
 }
 
+.nav-cv-link {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 400;
+  font-family: var(--font-mono);
+  transition: opacity 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.nav-cv-link:hover {
+  opacity: 0.5;
+}
+
 .nav-separator {
   font-size: clamp(11px, 1.4vw, 13px);
   color: var(--muted);

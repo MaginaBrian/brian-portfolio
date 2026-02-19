@@ -1,9 +1,5 @@
 import "./Navbar.css";
 
-/**
- * Navbar — sticky top header with name, role, location and nav links.
- * Receives `active` (current section id) and `scrollTo` (scroll handler) as props.
- */
 export default function Navbar({ active, scrollTo }) {
   return (
     <header className="header">
@@ -25,6 +21,15 @@ export default function Navbar({ active, scrollTo }) {
         >
           Projects
         </button>
+        <span className="nav-separator">,</span>
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-cv-link"
+        >
+          CV
+        </a>
         <span className="nav-separator">,</span>
         <button
           className={active === "contact" ? "active" : ""}
