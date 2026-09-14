@@ -3,9 +3,17 @@ export const projectsData = [
     date: "DEC 2025",
     title: "JavaHouse Radio",
     github: "https://github.com/MaginaBrian/JavaHouse",
-    external: "",
+    external: "https://javahouseradio.com/en/",
     tech: ["React", "Flask", "MySQL", "JWT", "RadioJar API"],
     desc: "Comprehensive music streaming web application with admin panel, substation management, activity tracking, and detailed reporting for Java House.",
+  },
+  {
+    date: "SEP 2026",
+    title: "Cosine Create",
+    github: "https://github.com/MaginaBrian/cosine_create",
+    external: "https://cosinecreate.com/#/",
+    tech: ["React", "Vite", "Flask", "MySQL", "JWT"],
+    desc: "Black-and-white site for a contract manufacturing studio with public brand pages, a Start a project form, and a hidden studio for signed-in clients, a textiles buyer, and admin.",
   },
   {
     date: "NOV 2025",
@@ -30,13 +38,5 @@ export const projectsData = [
     external: "https://erastus-portfolio-tawny.vercel.app/",
     tech: ["React", "Lucide Icons", "CSS3"],
     desc: "Modern responsive portfolio for agribusiness leader featuring timeline, achievements grid, testimonials, and contact form.",
-  },
-  {
-    date: "DEC 2025",
-    title: "Brian Magina Portfolio",
-    github: "https://github.com/MaginaBrian/brian-portfolio",
-    external: "",
-    tech: ["React", "Vite", "DM Serif Display", "DM Mono"],
-    desc: "Personal portfolio showcasing full-stack and mechatronics engineering projects with editorial design and smooth scroll animations.",
   },
 ];
